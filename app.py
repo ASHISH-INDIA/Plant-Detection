@@ -53,6 +53,7 @@ rf_classifier.fit(X_train_rf, y_train)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    
     if request.method == 'POST':
         if 'file' not in request.files:
             return render_template('index.html', message='No file part')

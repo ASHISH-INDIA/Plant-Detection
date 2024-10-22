@@ -195,17 +195,21 @@
         <!-- Intro Title with leaf icon -->
         <h2 class="intro-title"><i class="fas fa-leaf icon"></i>Welcome to our Plant Identification Tool</h2>
         <p class="intro-text">
-            Our plant identification tool can recognize a variety of plants. Currently, it recognizes the following plants by their common names:
+            Our plant identification tool is designed to help you identify various plant species quickly and effortlessly. Simply upload an image of a plant, and our tool will provide you with information about the plant's name, description, and potential uses.
         </p>
-        <ul>
+        <p class="intro-text">
+            Whether you're a nature enthusiast, gardener, or simply curious about the plant world, our tool can assist you in learning more about the incredible diversity of plant life around us.
+        </p>
+        <p> <ul>
             <li>Amla (Indian Gooseberry)</li>
             <li>Ashoka Tree</li>
             <li>Ashwagandha (Winter Cherry)</li>
             <li>Atis (Ativish)</li>
             <li>Brahmi (Water Hyssop)</li>
         </ul>
+        </p>
         <p class="intro-text">
-            Upload an image of one of these plants, and our tool will provide you with information about its name, description, and potential uses.
+            Explore the beauty of nature and enhance your knowledge with the help of our Plant Identification Tool.
         </p>
     </div>
 
@@ -256,18 +260,15 @@
 
             if (fileInput.files && fileInput.files[0]) {
                 const reader = new FileReader();
-
                 reader.onload = function(e) {
                     imagePreview.src = e.target.result;
-                    imagePreview.style.display = 'block'; // Show the image
-                    imagePreviewContainer.style.display = 'block'; // Show the container
+                    imagePreview.style.display = "block"; // Show the image preview
+                    imagePreviewContainer.style.display = "block"; // Show the image preview container
                 };
-
-                reader.readAsDataURL(fileInput.files[0]); // Read the file as a data URL
+                reader.readAsDataURL(fileInput.files[0]);
             } else {
-                imagePreview.src = '';
-                imagePreview.style.display = 'none'; // Hide the image
-                imagePreviewContainer.style.display = 'none'; // Hide the container
+                imagePreview.style.display = "none"; // Hide the image preview if no file is selected
+                imagePreviewContainer.style.display = "none"; // Hide the image preview container
             }
         }
     </script>
