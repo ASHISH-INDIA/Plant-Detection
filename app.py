@@ -4,13 +4,17 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from flask import Flask, render_template, request
+import os
 
+# Get the current directory of the script
+current_dir = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 
 # Step 1: Data Preparation
 
 dataset_dir = r"dataset\Plant Database"
-csv_file_path = r"dataset\datasetplant1.csv" # Update with the path to your CSV file
+csv_file_path = os.path.join(current_dir, 'dataset', 'datasetplant1.csv')
+
 
 # Load plant data from the CSV file into a DataFrame
 plant_data_df = pd.read_csv(csv_file_path)
