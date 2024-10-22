@@ -7,12 +7,12 @@ from flask import Flask, render_template, request
 import os
 
 # Get the current directory of the script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-app = Flask(__name__)
 
+app = Flask(__name__)
+current_dir = os.path.dirname(os.path.abspath(__file__))
 # Step 1: Data Preparation
 
-dataset_dir = r"dataset\Plant Database"
+dataset_dir = os.path.join(current_dir, 'dataset', 'Plant Database')
 csv_file_path = os.path.join(current_dir, 'dataset', 'datasetplant1.csv')
 
 
