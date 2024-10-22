@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 # Step 1: Data Preparation
 
-dataset_dir = r"C:\Users\ashis\OneDrive\Desktop\project\New folder (2)\project_folder\dataset\Plant Database"
-csv_file_path = r"C:\Users\ashis\OneDrive\Desktop\project\New folder (2)\project_folder\dataset\datasetplant1.csv" # Update with the path to your CSV file
+dataset_dir = r"dataset\Plant Database"
+csv_file_path = r"dataset\datasetplant1.csv" # Update with the path to your CSV file
 
 # Load plant data from the CSV file into a DataFrame
 plant_data_df = pd.read_csv(csv_file_path)
